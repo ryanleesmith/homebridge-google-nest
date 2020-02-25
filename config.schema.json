@@ -1,6 +1,7 @@
 {
   "pluginAlias": "Nest",
   "pluginType": "platform",
+  "singular": true,
   "headerDisplay": "Nest plug-in for [Homebridge](https://github.com/nfarina/homebridge) using the native Nest API",
   "footerDisplay": "If you are using a Nest accout see the [Using a Nest Account](https://github.com/chrisjshull/homebridge-nest#using-a-nest-account) section on GitHub for help on setting this plugin up with your Nest account. If you are using a Google Account then see [Using a Google Account](https://github.com/chrisjshull/homebridge-nest#using-a-google-account) section on GitHub for help on setting this plugin up with your Google account.<p> See [Feature Options](https://github.com/chrisjshull/homebridge-nest#feature-options) section on GitHub to see additional features that can be enabled/disabled.",
   "schema": {
@@ -12,36 +13,20 @@
         "default": "Nest",
         "description": "The name that will appear in your homebridge log"
       },
-      "email": {
-        "title": "Email",
-        "type": "string",
-        "format": "email",
-        "placeholder": "Email",
-        "description": "Your Nest Account email address"
-      },
-      "password": {
-        "title": "Password",
-        "type": "string",
-        "placeholder": "Password",
-        "description": "Your Nest Account password",
-        "options": {
-          "hidden": true
-        }
-      },
       "access_token": {
         "title": "Access Token",
         "type": "string",
-        "description": "Required field when using access token: See Access Token Mode Section of project page (you probably won't need this mode).",
-        "placeholder": "Nest service access token"
+        "description": "See Using a Nest Account section of project page for help.",
+        "placeholder": "Nest Access Token"
       },
       "googleAuth": {
         "title": "Google Auth",
         "type": "object",
-        "description": "See Using a Google Account section of project page for help.",
         "properties": {
           "issueToken": {
               "title": "Issue Token",
-              "type": "string"
+              "type": "string",
+              "description": "See Using a Google Account section of project page for help."
             },
           "cookies": {
               "title": "Cookies",
@@ -53,11 +38,6 @@
             }
     }
   },
-      "pin": {
-        "title": "Pin",
-        "type": "integer",
-        "description": "PIN code sent to your mobile device for 2-factor authentication - see Using a Nest Account Section of project page for help."
-      },
       "structureId": {
         "title": "Your Structure's ID",
         "type": "string",
@@ -108,14 +88,6 @@
       "flex-direction": "row",
       "items": [
         {
-            "key": "email",
-            "type": "email"
-        },
-        {
-            "key": "password",
-            "type": "password"
-        },
-        {
             "key": "access_token",
             "type": "access_token"
         }
@@ -150,7 +122,6 @@
       "title": "Optional Fields",
       "expandable": true,
       "items": [
-        "pin",
         "structureId",
         "fanDurationMinutes",
 {

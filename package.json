@@ -1,14 +1,16 @@
 {
   "bundleDependencies": false,
   "dependencies": {
-    "bluebird": "^3.7.2",
-    "chalk": "^3.0.0",
+    "axios": "^0.19.2",
     "eslint": "^5.16.0",
-    "hap-nodejs": "^0.5.6",
+    "ip": "^1.1.5",
     "lodash.debounce": "^4.0.8",
-    "promise-prompt": "^1.1.1",
-    "request": "^2.88.0",
-    "request-promise": "^4.2.5"
+    "pbf": "^3.2.1",
+    "promise-prompt": "^1.1.0",
+    "protobufjs": "^6.8.8",
+    "querystring": "^0.2.0",
+    "uuid": "^3.3.3",
+    "varint": "^5.0.0"
   },
   "repository": {
     "type": "git",
@@ -34,7 +36,7 @@
     "prepublishOnly": "npm run lint",
     "preversion": "npm run lint"
   },
-  "version": "1.0.0",
+  "version": "2.0.0",
   "warnings": [
     {
       "code": "ENOTSUP",
@@ -42,7 +44,7 @@
         "node": ">=7.0.0",
         "homebridge": ">=0.2.5"
       },
-      "pkgid": "homebridge-google-nest@1.0.0"
+      "pkgid": "homebridge-google-nest@2.0.0"
     }
   ]
 }
